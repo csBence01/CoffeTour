@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Kávé Shop</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+     <!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					<link rel="stylesheet" href="css/etalage.css">
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								thumb_image_width: 300,
+								thumb_image_height: 400,
+								
+								show_hint: true,
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							// This is for the dropdown list example:
+							$('.dropdownlist').change(function(){
+								etalage_show( $(this).find('option:selected').attr('class') );
+							});
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+								<li><a href="index.html">Főoldal</a></li>
+						    	<li><a href="termekek.html">Termékek</a></li>
+						    	<li><a href="experiance.html">Profil</a></li>
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+
+				    <ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+						  	<a href="#"><img src="images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
+						  </div>
+						   <div class="clear"></div>
+						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
+						  <li class="list_desc"><h4><a href="#">Ajándék Kávé</a></h4><span class="actual">1 x
+                          4500HUF</span></li>
+						  <div class="login_buttons">
+							 <div class="check_button"><a href="checkout.html">Check out</a></div>
+							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 single_left">
+				   <div class="single_image">
+					     <ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="images/term1.jpg" />
+									<img class="etalage_source_image" src="images/term1.jpg" />
+								</a>
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/term4.jpg" />
+								<img class="etalage_source_image" src="images/term4.jpg" />
+							</li>
+						
+						</ul>
+					    </div>
+				        <!-- end product_slider -->
+				        <div class="single_right">
+				        	<h3>Valamelyik kávé</h3>
+				        	<p class="m_10">Ez a kávé leírása, nemtom mit írjak ide, de sok kell szóval msot valamit idemásolok Az adatátviteli kapcsoló vagy switch (ejtsd: [swɪtʃ] Loudspeaker.svg kiejtése✩) egy aktív számítógépes hálózati eszköz, amely a rácsatlakoztatott eszközök között adatáramlást valósít meg. Többnyire az OSI-modell adatkapcsolati rétegében (2. réteg, esetleg magasabb rétegekben) dolgozik. Magyar jelentése: vált, kapcsol.
+
+								A fizikai rétegbeli feladatokat ellátó hubokkal szemben az Ethernet switchek adatkapcsolati rétegben megvalósított funkciókra is támaszkodnak. A MAC címek vizsgálatával képesek közvetlenül a célnak megfelelő portra továbbítani az adott keretet; tekinthetők gyors működésű, többportos hálózati hídnak is. Portok között tehát nem fordul elő ütközés (mindegyikük külön ütközési tartományt alkot), ebből adódóan azok saját sávszélességgel gazdálkodhatnak, nem kell megosztaniuk azt a többiekkel. A broadcast és multicast kereteket természetesen a switchek is floodolják az összes többi portjukra.</p>
+							<div class="btn_form">
+							   <form>
+								 <input type="submit" value="buy now" title="">
+							  </form>
+							</div>
+							<ul class="add-to-links">
+    			              <li><img src="images/wish.png" alt=""><a href="#">Kívánságlistára</a></li>
+    			            </ul>
+				        </div>
+				        <div class="clear"> </div>
+				</div>
+				<div class="col-md-3">
+				  <div class="box-info-product">
+					<p class="price2">5000Ft</p>
+					       <ul class="prosuct-qty">
+								<span>Mennyiség:</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+							</ul>
+							<button type="submit" name="Submit" class="exclusive">
+							   <span>kosárba</span>
+							</button>
+				   </div>
+			   </div>
+			</div>		
+			<div class="desc">
+			   	<h4>Leírrás</h4>
+			   	<p>Ez egy finom kávé még nemt udom melyik mert ez a része nem lett megírva</p>
+			</div>
+	     </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="footer_box">
+						<h4><a href="termekek.html">Products</h4>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<img src="images/logo.png">
+					<ul class="social">	
+						<li class="facebook"><a href="#"><span> </span></a></li>
+						<li class="twitter"><a href="#"><span> </span></a></li>
+						<li class="instagram"><a href="#"><span> </span></a></li>											  				
+					  </ul>
+				</div>
+				<div class="col-md-4">
+					<ul class="footer_box">
+						<h4>Hírlevél</h4>
+						<div class="footer_search">
+						   <form>
+							<input type="text" value="Add meg az email címed" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Add meg az email címed';}">
+							<input type="submit" value="Go">
+						   </form>
+						</div>
+						
+						   
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>	
+</html>
