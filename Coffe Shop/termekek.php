@@ -15,6 +15,8 @@
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/fwslider.js"></script>
 <!--end slider -->
+
+
 <script type="text/javascript">
         $(document).ready(function() {
             $(".dropdown img.flag").addClass("flagvisibility");
@@ -48,6 +50,17 @@
      </script>
 </head>
 <body>
+<?php
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="webshopdb";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+mysqli_select_db($conn,"termékek");
+
+?>
 	<div class="header">
 		<div class="container">
 			<div class="row">
@@ -101,9 +114,23 @@
 		<div class="container">
 			<div class="row shop_box-top">
 				<div class="col-md-3 shop_box"><a href="single.html">
+			<?php
+				$sql = "SELECT * FROM `termékek` WHERE `ID` = 1";
+				$result = mysqli_query($conn,$sql);
+
+
+
+
+				while ($row = $result->fetch_assoc()) {
+				echo $row['Név']."<br>";
+				}
+
+			?>
+
+
 					<img src="images/term1.jpg" class="img-responsive" alt=""/>
 					<div class="shop_desc">
-						<h3><a href="#">Fekete Edison Kávé</a></h3>
+						//<h3><a href="#">Fekete Edison Kávé</a></h3>
 						<p>NEmtom biztos jó.... </p>
 						<span class="reducedfrom">10000Ft</span>
 						<span class="actual">1500Ft</span><br>
@@ -116,6 +143,7 @@
 				<div class="col-md-3 shop_box"><a href="single.html">
 					<img src="images/term2.jpg" class="img-responsive" alt=""/>
 					<div class="shop_desc">
+						
 						<h3><a href="#">Rosso Café</a></h3>
 						<p>Nem tudom ez se tűnik rossznak </p>
 						<span class="actual">5000Ft</span><br>
